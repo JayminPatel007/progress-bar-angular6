@@ -1,6 +1,6 @@
 app-file-upload-progressbar-box {
   position:fixed;
-  overflow-y:scroll;
+  overflow-y:auto;
   overflow-x:hidden;
   max-height: 500px;
   bottom: 0;

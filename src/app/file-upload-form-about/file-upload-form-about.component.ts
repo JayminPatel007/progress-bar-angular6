@@ -4,13 +4,13 @@ import {FileUploadService} from '../file-upload.service';
 
 @Component({
   selector: 'app-file-upload-form',
-  templateUrl: './file-upload-form.component.html',
-  styleUrls: ['./file-upload-form.component.css']
+  templateUrl: './file-upload-form-about.component.html',
+  styleUrls: ['./file-upload-form-about.component.css']
 })
-export class FileUploadFormComponent implements OnInit {
+export class FileUploadFormAboutComponent implements OnInit {
   form: FormGroup;
   dropZoneActive = false;
-  tag = 'add';
+  tag = 'about';
 
   constructor(private fb: FormBuilder, private fileUploadService: FileUploadService) { }
 
@@ -20,7 +20,6 @@ export class FileUploadFormComponent implements OnInit {
     });
   }
   onSelect(event, fileInput: HTMLInputElement): void {
-    // console.log(event.target.files);
     console.log('This function is calllllllllllllllllllllllllllllllllllled');
     let id = this.fileUploadService.files.length;
     const filesWithTag = [];

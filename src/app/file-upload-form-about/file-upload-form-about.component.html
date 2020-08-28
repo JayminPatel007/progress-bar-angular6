@@ -8,7 +8,7 @@
   <div class="files_upload">
     <form [formGroup]="form">
       <div class="form-group">
-        <input type="file" name="files" (change)="onSelect($event, inputEl)" multiple #inputEl/>
+        <input type="file" name="files" (change)="onSelect($event, fileinput)" multiple #fileinput/>
       </div>
     </form>
   </div>

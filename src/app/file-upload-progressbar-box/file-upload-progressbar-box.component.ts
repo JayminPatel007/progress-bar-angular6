@@ -9,6 +9,7 @@ import {FileUploadService} from '../file-upload.service';
 export class FileUploadProgressbarBoxComponent implements OnInit {
 
   progress = [];
+  view = true;
 
   constructor(private fileUploadService: FileUploadService) { }
 
@@ -17,7 +18,7 @@ export class FileUploadProgressbarBoxComponent implements OnInit {
       next: (data) => {
         let boo = false;
         for (const obj of this.progress) {
-          if (obj.name === data.name) {
+          if (obj.id === data.id) {
             obj.progress = data.progress
             obj.type = data.type;
             if (data.imgUrl) {
@@ -25,7 +26,7 @@ export class FileUploadProgressbarBoxComponent implements OnInit {
               obj['tag'] = data.tag;
             }
             boo = true;
-            console.log(obj);
+            // console.log(obj);
           }
         }
         if (!boo) {
@@ -40,5 +41,9 @@ export class FileUploadProgressbarBoxComponent implements OnInit {
   deleteProgress() {
     this.progress = [];
     this.fileUploadService.reset();
+  }
+
+  toggleShowOption() {
+    this.view = !this.view;
   }
 }

@@ -9,6 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import {AppRoutingModule} from './app-routing.module';
 import { FileDropDirective } from './file-drop.directive';
+import {FileUploadFormAboutComponent} from './file-upload-form-about/file-upload-form-about.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FileDropDirective } from './file-drop.directive';
     FileUploadFormComponent,
     FileUploadProgressbarBoxComponent,
     HomeComponent,
-    FileDropDirective
+    FileDropDirective,
+    FileUploadFormAboutComponent
   ],
   imports: [
     BrowserModule,
